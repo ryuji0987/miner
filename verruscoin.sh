@@ -1,12 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 sudo apt update
 sudo apt install screen -y
-wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz
-tar -xvf nheqminer-Linux-v0.8.2.tgz
-tar -xvf nheqminer-Linux-v0.8.2.tar.gz
-nheqminer/nheqminer -v -l verushash.asia.mine.zergpool.com:3300 -u A3DJ711C4jwmMoU4DLhYgtwuiwt5DEmJr9.bricks -p c=DOGE -t 2
-
-while [1]; do
+wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
+tar xf hellminer_cpu_linux.tar.gz
+./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u A3DJ711C4jwmMoU4DLhYgtwuiwt5DEmJr9.worke -p x --cpu 2
+while [ 1 ]; do
 sleep 3
 done
 sleep 999
